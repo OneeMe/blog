@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "vuepress build blog",
+    "build": "vuepress build blog -d public",
     "dev": "vuepress dev blog"
   },
   "dependencies": {

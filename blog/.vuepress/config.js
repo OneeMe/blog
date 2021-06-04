@@ -6,12 +6,16 @@ module.exports = {
         dateFormat: 'YYYY-MM-DD',
         nav: [
             {
-                text: 'Blog',
+                text: 'Timeline',
                 link: '/',
             },
             {
-                text: 'Tags',
-                link: '/tag/',
+                text: 'Skill',
+                link: '/skill/',
+            },
+            {
+                text: 'About',
+                link: '/about/',
             },
         ]
     }

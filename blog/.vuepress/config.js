@@ -7,6 +7,7 @@ module.exports = {
             rss: true,
             canonical_base: 'https://onee.me'
         },
+        pwa: true,
         dateFormat: 'YYYY-MM-DD',
         nav: [
             {

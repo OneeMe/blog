@@ -3,6 +3,10 @@ module.exports = {
     description: 'Onee\'s Blog',
     theme: '@vuepress/theme-blog',
     themeConfig: {
+        feed: {
+            rss: true,
+            canonical_base: 'https://onee.me'
+        },
         dateFormat: 'YYYY-MM-DD',
         nav: [
             {
@@ -18,5 +22,5 @@ module.exports = {
                 link: '/about/',
             },
         ]
-    }
+    },
 }

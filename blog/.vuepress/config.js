@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Onee\'s Blog',
     description: 'Onee\'s Blog',
+    theme: '@vuepress/theme-blog',
     themeConfig: {
         feed: {
             rss: true,

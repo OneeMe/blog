@@ -1,6 +1,8 @@
 ---
 title: 使用 github pages 搭建自己的博客 —— 自定义域名
 date: 2017-12-04 00:37 +0800
+typora-root-url: ../.vuepress/public
+typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 ---
 
 按照 GitHub 官方的[指导](https://help.GitHub.com/articles/quick-start-setting-up-a-custom-domain/)，如果我们想把自己购买的域名绑定到 GitHub pages 的页面，我们需要在仓库的设置中添加自己的域名，同时还需要在自己域名的经销商网站增加两条 A 类型的记录。我很好奇这些操作实际都做了什么，因此写下本文来说明这些操作的目的以及其意义。
@@ -15,16 +17,16 @@ date: 2017-12-04 00:37 +0800
 
 于是，兴致勃勃的我，在阿里云的控制中心，增加了这样一条记录，将 test.forelax.space 指向了 forelaxx.GitHub.io：
 
-![image-20200922134527369](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134527369.png)
+![image-20200922134527369](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134527369.png)
 
 然而，当我访问 test.forelax.space 时，得到的却是一个 404 的页面：
 
-![image-20200922134535827](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134535827.png)
+![image-20200922134535827](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134535827.png)
 
 
 此时，我并没有按照 GitHub 官方的说明那样，在仓库的设置页面设置我的域名：
 
-![image-20200922134543652](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134543652.png)
+![image-20200922134543652](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134543652.png)
 
 
 神奇的是，当我在这里设置了我的域名，访问 forelax.space 就可以顺利跳转到 GitHub pages 的页面。那么，我们来继续探这背后的原理。
@@ -35,11 +37,11 @@ date: 2017-12-04 00:37 +0800
 
 当我尝试删除然后重新填入这个设置项后，我发现我仓库中多出了两个 commit:
 
-![image-20200922134553566](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134553566.png)
+![image-20200922134553566](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134553566.png)
 
 而文件的内容也很简单，就是我们填入的域名：
 
-![image-20200922134601246](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134601246.png)
+![image-20200922134601246](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134601246.png)
 
 由此看来，这个设置项所做的，仅仅是修改了仓库的 master 分支的一个叫做 CNAME 的文件而已。那么 GitHub pages 会怎么使用这个文件？
 
@@ -53,7 +55,7 @@ date: 2017-12-04 00:37 +0800
 
 之所以是这两个服务器，时因为我在购买域名的时候，选择了默认的域名解析服务器，所以给 .space 域名服务器中添加的记录是阿里云自己的域名服务器。如果有能力自己搭建 DNS 服务器，也可以在阿里云的控制台把 DNS 解析服务器改成自己的 DNS 服务器的 IP。如下图：
 
-![image-20200922134610992](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134610992.png)
+![image-20200922134610992](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134610992.png)
 
 以上过程是我的猜想，那么我们如何证实这个猜想呢？我们可以用 `dig +trace test.forelax.space` 这个命令来看看域名解析过程中的每一步都发生了什么：
 
@@ -105,7 +107,7 @@ om8amflncknjroa3cjf9287ka296qfvm.space.	3600 IN	RRSIG NSEC3 8 2 3600 20171214011
 
 也许你会疑惑，这里获取到根服务器的时候，并没有给出 IP 啊，那下一步是怎么知道根服务器的地址的？其实返回的请求里头是带有地址的，只是 `dig` 这个命令没有显示出来，用 WireShark 抓取这一次的返回包我们就可以看到返回的内容中是包含有根服务器的 IP 地址的：
 
-![image-20200922134624760](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134624760.png)
+![image-20200922134624760](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134624760.png)
 
 
 ### 当我在阿里云上增加了一条解析记录后，发生了什么？
@@ -139,7 +141,7 @@ sni.GitHub.map.fastly.net. 26	IN	A	151.101.73.147
 
 当浏览器获得这个 IP 地址后，便利用这个 IP 地址构建 HTTP 请求：
 
-![image-20200922134636354](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134636354.png)
+![image-20200922134636354](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134636354.png)
 
 然而，GitHub 的服务器返回给我们一个 404 的结果。为什么？
 
@@ -159,7 +161,7 @@ sni.GitHub.map.fastly.net. 26	IN	A	151.101.73.147
 
 即便我在仓库中修改了 CNAME 文件并强行 push 上去，GitHub 也不会根据这个 CNAME 文件做任何事情，并且会在设置项中给出警告：
 
-![image-20200922134643631](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134643631.png)
+![image-20200922134643631](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134643631.png)
 
 ### 那如我把自己的域名解析设置成别人的 GitHub.io 的地址，行不行？
 
@@ -172,18 +174,18 @@ sni.GitHub.map.fastly.net. 26	IN	A	151.101.73.147
 看到这里，我们可能会想，我们直接给自己的域名添加一条 CNAME 类型的记录，指向我们 GitHub Pages 的地址不就 OK 了？实际尝试以后，发现这个方式也确实可行。但是，在 GitHub 官方给出的自定义域名设置[指南](https://help.github.com/articles/setting-up-an-apex-domain/)中，建议我们给我们自己的主域名添加两条 A 类型的记录，并且不建议我们直接添加 CNANE 记录：
 
 
-![image-20200922134652252](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134652252.png)
+![image-20200922134652252](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134652252.png)
 
 这是为什么呢？这里说的『issues with other services』又指的是什么呢？
 
 这个问题直到我使用阿里云的企业邮箱才明白是怎么回事。当你要使用阿里云的企业邮箱时，你需要给你的域名添加一系列新的记录：
 
-![image-20200922134658504](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134658504.png)
+![image-20200922134658504](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134658504.png)
 
 
 我们可以看到，使用邮箱服务的时候是需要给我们的主域名添加 MX 类型的解析记录的，如果我们使用 CNAME 类型的记录，就无法添加 MX 类型的记录，因为 CNAME 类型的记录不可以和其他任何记录共存，但 A 记录却可以和 MX 类型的记录共存，具体的记录冲突规则见下图：
 
-![image-20200922134705383](../assets/images/2017-12-04-githubpages-with-dns/image-20200922134705383.png)
+![image-20200922134705383](/assets/images/2017-12-04-githubpages-with-dns/image-20200922134705383.png)
 
 所以，GitHub 官方推荐我们添加 A 类型的记录~原因就在这里~
 

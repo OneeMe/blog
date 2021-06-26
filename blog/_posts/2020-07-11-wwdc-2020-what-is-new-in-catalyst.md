@@ -1,6 +1,8 @@
 ---
 title: "WWDC20-10143-What's new in Mac Catalyst"
 date: 2020-07-11 21:47 +0800
+typora-root-url: ../.vuepress/public
+typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 ---
 
 [Mac Catalyst](https://developer.apple.com/mac-catalyst/) 是苹果在 2019 年的 WWDC 大会上宣布的一种新的技术，这种技术的目的是让我们能够非常简单的将已有的 iPad App 快速转为一个 macOS App。
@@ -29,21 +31,21 @@ date: 2020-07-11 21:47 +0800
 
 在今年的 Catalyst 中，我们可以使用更多的 iOS SDK，他们包括：
 
-![F5634243-4716-4387-AE10-E15B5CDEBE28](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/F5634243-4716-4387-AE10-E15B5CDEBE28.png)
+![F5634243-4716-4387-AE10-E15B5CDEBE28](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/F5634243-4716-4387-AE10-E15B5CDEBE28.png)
 
 尽管苹果的工程师做了很多的努力，但是在 macOS 依旧有很多 SDK 是无法使用的：
 
-![90C83540-35CC-4679-AB60-BEB1AFC76315](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/90C83540-35CC-4679-AB60-BEB1AFC76315.png)
+![90C83540-35CC-4679-AB60-BEB1AFC76315](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/90C83540-35CC-4679-AB60-BEB1AFC76315.png)
 
 不过针对这些 SDK，在新的 Catalyst 中，开发者可以不再使用 targetEnvironment 来区分使用这些使用这些 SDK 的代码了，而是可以通过运行时判断的方式来让代码更具有可移植性。
 
 例如 ARKit，在之前的 Catalyst 中，由于 macOS 并没有 ARKit，开发者们只能通过这种方式来区分代码：
 
-![1586AFFF-C79E-43FD-AA81-380E04849EB0](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/1586AFFF-C79E-43FD-AA81-380E04849EB0.png)
+![1586AFFF-C79E-43FD-AA81-380E04849EB0](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/1586AFFF-C79E-43FD-AA81-380E04849EB0.png)
 
 现在，借助在 Catalyst 14.0 中新增的 [supported](https://developer.apple.com/documentation/arkit/arconfiguration/2923553-issupported) 属性，开发者可以不再使用 targetEnvironment 来区分代码了：
 
-![D3848F3B-17E6-441D-920B-872911D27415](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/D3848F3B-17E6-441D-920B-872911D27415.png)
+![D3848F3B-17E6-441D-920B-872911D27415](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/D3848F3B-17E6-441D-920B-872911D27415.png)
 
 更多类似的判断性接口都会在苹果的 API 文档中体现，利用这些接口，我们就能写出更好的具有 API
 
@@ -63,37 +65,37 @@ date: 2020-07-11 21:47 +0800
 
 [UITablView.selectionFollowsFocus](https://developer.apple.com/documentation/uikit/uitableview/3573921-selectionfollowsfocus?language=objc) 和 [UICollectionView.selectionFollowsFocus](https://developer.apple.com/documentation/uikit/uicollectionview/3573920-selectionfollowsfocus) 让用户在TableView 和 CollectionView 的 Cell 之间使用键盘的上下键来切换当前选中的 Cell：
 
-![2020-07-12 13-49-36.2020-07-12 13_50_18](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 13-49-36.2020-07-12 13_50_18.gif)
+![2020-07-12 13-49-36.2020-07-12 13_50_18](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 13-49-36.2020-07-12 13_50_18.gif)
 
 使用 [UISceneActivationRequestOptions.collectionJoinBehavior](https://developer.apple.com/documentation/uikit/uisceneactivationrequestoptions/3623235-collectionjoinbehavior) 可以改变用户尝试创建新的 Tab 时的默认行为，目前提供了四种行为：
 
-![C1860D6A-9CF2-47BB-9E9E-8B7300C8CAA8](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/C1860D6A-9CF2-47BB-9E9E-8B7300C8CAA8.png)
+![C1860D6A-9CF2-47BB-9E9E-8B7300C8CAA8](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/C1860D6A-9CF2-47BB-9E9E-8B7300C8CAA8.png)
 
 使用在 iOS 14 上新增的 UIColorWell 和 UIColorPickerViewController，可以分别在 iOS 和 macOS 上展示对应平台的默认样式：
 
-![image-20200712141630858](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712141630858.png)
+![image-20200712141630858](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712141630858.png)
 
 得益于 iPadOS 14 与 macOS Big Sur 在整体样式上的统一，原本可能样式完全不同的 UIKit 组件在 macOS 下也有了更好的表现，例如现在在 iOS 14、iPadOS 14 上日期选择器有了如下的变化：
 
-![image-20200712142041633](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712142041633.png)
+![image-20200712142041633](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712142041633.png)
 
 原本我们所习惯的 ActionSheet 也变成了 Pull Down Menu 的形式：
 
-![image-20200712142301808](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712142301808.png)
+![image-20200712142301808](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712142301808.png)
 
 而在 API 上，iOS 14 也为所有的 UIButton 添加了非常方便的展示 Pull Down Menu 的 API—— [init(frame: CGRect, primaryAction: UIAction?)](https://developer.apple.com/documentation/uikit/uibutton/3600349-init)，使用了这个 API 的 UIButton 在 macOS Big Sur 上也能得到良好的表现：
 
-![image-20200712143035029](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712143035029.png)
+![image-20200712143035029](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712143035029.png)
 
 如果想知道更多的类似这样的 UIControl 的变化，可以查看 [Session 10205 Design with iOS pickers, menus and actions](https://developer.apple.com/wwdc20/10205)。
 
 另外，在 Big Sur 中，开发者所弹出的 ModalViewController 以及 PopoverPresentationController 都将会以独立的 Window 形式存在。这意味着，我们通过 `prensentViewController:animated` 所弹出的 ModalViewController 在 macOS 是可以单独被拉伸缩放窗口大小的：
 
-![2020-07-12 15-17-39.2020-07-12 15_18_30](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 15-17-39.2020-07-12 15_18_30.gif)
+![2020-07-12 15-17-39.2020-07-12 15_18_30](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 15-17-39.2020-07-12 15_18_30.gif)
 
 而我们弹出的 PopoverPresentationController 的内容也可以拓展到主 Window 之外：
 
-![image-20200712152054631](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712152054631.png)
+![image-20200712152054631](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712152054631.png)
 
 另外，在 macOS Big Sur 中，Catalyst 对 SF Symbols 有了更好的支持，开发者可以完全放心的使用几乎所有的 SF Symbols 的功能。
 
@@ -105,7 +107,7 @@ date: 2020-07-11 21:47 +0800
 
 这种方式会导致在 macOS 上的 iPad App 看起来和 iPad 上不太一样。为了解决这些问题，今年的 Catalyst 给出了 Optimized for Mac 这样一个新的方案，基本思路是通过底层优化让 iPad App 在 iPadOS 和 macOS 上有相同的表现。
 
-![image-20200712161333929](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712161333929.png)
+![image-20200712161333929](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712161333929.png)
 
 由于这部分内容相对比较多，因此苹果工程师开启了一个专门的 Session （[Session 10056 Optimize the interface of your Mac Catalyst app](https://developer.apple.com/wwdc20/10056)）来讲解其中的内容。我们的专栏中也针对该部分内容做了相应总结，参见 [WWDC20 10056 - 美化 Mac Catalyst app](https://xiaozhuanlan.com/topic/9701235486)。
 
@@ -119,11 +121,11 @@ date: 2020-07-11 21:47 +0800
 
 例如，如今在 SwiftUI 中开发者可以设置 App 的菜单栏：
 
-![img](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/8157560cly1gg63nqbb6qj20qo0f0af1.jpg)
+![img](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/8157560cly1gg63nqbb6qj20qo0f0af1.jpg)
 
 同时也可以设置之前 SwiftUI 所不支持的 Toolbar：
 
-![img](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/8157560cly1gg63nqzqulj20qo0f045t.jpg)
+![img](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/8157560cly1gg63nqzqulj20qo0f045t.jpg)
 
 更多的内容可以参见 [Session 10041 What's new in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10041/?time=3)，对应的小专栏文章为 [WWDC20 - What's new in SwiftUI](https://xiaozhuanlan.com/topic/0389615274)
 
@@ -135,7 +137,7 @@ date: 2020-07-11 21:47 +0800
 
 除此之外，Catalyst Extension 的生命周期相对于之前也有所变化。当用户不再使用 Extension 时，Extension 不会立马进入 Not Running 状态，而是会先进入 Suspended 状态。当用户再次使用的时候，Extension 会恢复到 In Use 状态。同时，在 macOS 上 Extension 还获得了更为贴近 iOS 的内存限制（在之前的 Catalyst 中基本对内存没有太多的限制）。能够看出 Catalyst 在尽力让 macOS 上的 iPad App 与运行在 iPadOS 中的状态更为贴近。
 
-![image-20200712172555306](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712172555306.png)
+![image-20200712172555306](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712172555306.png)
 
 ### 开箱即用的 Universal Purchase 
 
@@ -145,7 +147,7 @@ Universal Purchase 是苹果在 2020 年初推出的一项面向开发者的新�
 
 如果开发者不想使用这一能力，只要在 Xcode 中将 "Use iOS Bundle identifier" 选项关闭即可。
 
-![image-20200712174836489](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712174836489.png)
+![image-20200712174836489](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712174836489.png)
 
 如果开发者是目前开发的 macOS App 并不是基于 Catalyst 开发的，或者开发的 Catalyst App 是面向 Catalina 开发的，那么可以参照  [Offering Universal Purchase](https://developer.apple.com/support/universal-purchase/) 的文档来完成 Universal Purchase 的设置。
 
@@ -155,7 +157,7 @@ Universal Purchase 是苹果在 2020 年初推出的一项面向开发者的新�
 
 我们举几个例子，首先我们可以来看看 Toobar 的新样式：
 
-![image-20200712175532895](../assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712175532895.png)
+![image-20200712175532895](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/image-20200712175532895.png)
 
 这些所有的 Toolbar 新样式，在 Catalyst 中都可以通过 [UITitleBar.toolbarStyles](https://developer.apple.com/documentation/uikit/uititlebar/3604076-toolbarstyle) 来设置，并且这个设置由于是在 UIWindowScene 上的，因此我们也可以针对每一个 Window 设置不同的 Toolbar 样式。
 

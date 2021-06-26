@@ -1,6 +1,8 @@
 ---
 title: "WWDC20-10114-iPad and iPhone apps on Apple Silicon Macs"
 date: 2020-07-12 20:33 +0800
+typora-root-url: ../.vuepress/public
+typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 ---
 
 今年 WWDC 最为重磅的消息可能就是 Apple Silicon Mac——搭载着苹果自研芯片的 Mac。得益于 CPU 架构的统一，在 Mac上原生的运行 iPhone 或者 iPad App 似乎已经不是那么的遥不可及了。相信很多人都会好奇苹果将会用什么样的方式将这些移动设备上的 App 带到我们手中的 Mac 上。[Session 10114 iPad and iPhone apps on Apple Silicon Macs](https://developer.apple.com/videos/play/wwdc2020/10114/) 就是对这些疑问的一个统一回答。
@@ -26,11 +28,11 @@ date: 2020-07-12 20:33 +0800
 - Web Apps：基于前端技术栈开发，比较老牌的一种开发方式
 - Games：基于 Metal 框架开发，相对比较新的一种开发方式
 
-![image-20200712205637358](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712205637358.png)
+![image-20200712205637358](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712205637358.png)
 
 得益于 Catalyst 在 macOS 上引入的 UIKit，在 Apple Silicon Mac 上，我们可以非常轻松的运行原本运行在 iPhone/iPad 上的 App。
 
-![image-20200712210101406](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712210101406.png)
+![image-20200712210101406](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712210101406.png)
 
 默认运行起来的这些 App 在很多方面上都可以获得类似 macOS App 的体验，包括：
 
@@ -91,7 +93,7 @@ iPhone/iPad 上都有着大量的环境传感器，例如加速剂、陀螺仪�
 
 在 macOS 中，很多系统控件的行为表现会和 iPhone/iPad 上不太一样，例如 Alert：
 
-![image-20200712213344387](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712213344387.png)
+![image-20200712213344387](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712213344387.png)
 
 所以 App 的代码中不要有任何类似假定系统控件弹出位置的代码，因为这些代码运行在 Mac 上时，会得到完全不同的结果。
 
@@ -120,11 +122,11 @@ iPhone/iPad 上都有着大量的环境传感器，例如加速剂、陀螺仪�
 
 唯一值得一提的是，根据苹果工程师的说法，在 Apple Silicon Mac 上，使用 Xcode 打开 iOS 工程，在 Target 的 Destination Device 中会多一个 My Mac(Designed for iPad) 这样一个设备：
 
-![image-20200712215659004](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712215659004.png)
+![image-20200712215659004](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712215659004.png)
 
 选择这个设备，运行起来后就会看到这样的效果——没有模拟器，直接运行在 Mac 上的 iOS App：
 
-![image-20200712220053235](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712220053235.png)
+![image-20200712220053235](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712220053235.png)
 
 
 
@@ -134,7 +136,7 @@ iPhone/iPad 上都有着大量的环境传感器，例如加速剂、陀螺仪�
 
 将 iPhone/iPad App 发布到 Mac App Store 的步骤和发布到 iOS App Store 的步骤是基本一致的，开发者需要做的就是同意新的开发者协议，然后把能够发布到 Mac 上的 App 勾选发布到 Mac 即可，整个过程就像是发布到一个新的设备类型一样。
 
-![image-20200712221130312](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712221130312.png)
+![image-20200712221130312](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712221130312.png)
 
 通过这种方式发布的 App 同样也可以使用 StoreKit 完成应用内购买、AppThing 以及 On-demand Resources 这些 iOS App Store 提供的功能，唯一有所区别的是，TestFlight 并不支持这种形式的 App。
 
@@ -146,5 +148,5 @@ iPhone/iPad 上都有着大量的环境传感器，例如加速剂、陀螺仪�
 
 虽然形式非常不同，但是苹果 Catalyst + Apple Silicon Mac 的这套组合拳，让我不禁联想到了 IPad 早年推出的时可以运行 iPhone App 的操作。以成熟的生态带动一个不那么成熟的生态，进而创建/拉动一个新的生态。虽然现在只是一个开始，但说不定过几年再看我们会发现：
 
-![image-20200712222100729](../assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712222100729.png)
+![image-20200712222100729](/assets/images/2020-07-12-wwdc-20-ipad-and-iphone-apps-on-apple-silicon-macs/image-20200712222100729.png)
 

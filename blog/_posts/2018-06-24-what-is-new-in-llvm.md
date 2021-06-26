@@ -75,7 +75,7 @@ date: 2018-06-24 00:37 +0800
 
 而在使用 GCD 的过程中也有一种不太好的模式，我们先来看下面一段代码：
 
-```obj-c
+```objc
 + (NSString *)requestCurrentTaskName {
     __block NSString *taskName = nil;
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);

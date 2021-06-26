@@ -3,8 +3,6 @@ title: "WWDC20-10143-What's new in Mac Catalyst"
 date: 2020-07-11 21:47 +0800
 ---
 
-- 目录
-{:toc}
 [Mac Catalyst](https://developer.apple.com/mac-catalyst/) 是苹果在 2019 年的 WWDC 大会上宣布的一种新的技术，这种技术的目的是让我们能够非常简单的将已有的 iPad App 快速转为一个 macOS App。
 
 这种技术的简单原理就是，在 macOS 上等价提供 UIKit 等 SDK 的 API 或者实现，让原本使用 UIKit 以及其他 iOS SDK 开发的 iPad App，在 macOS 上也能正常使用。.

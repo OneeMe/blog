@@ -15,6 +15,8 @@ jobs:
         with:
           node-version: "12.x"
           lfs: true
+      - name: Checkout LFS Objects
+        run: git lfs checkout
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:

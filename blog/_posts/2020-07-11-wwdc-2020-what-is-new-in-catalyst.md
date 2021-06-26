@@ -47,7 +47,7 @@ typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 
 ![D3848F3B-17E6-441D-920B-872911D27415](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/D3848F3B-17E6-441D-920B-872911D27415.png)
 
-更多类似的判断性接口都会在苹果的 API 文档中体现，利用这些接口，我们就能写出更好的具有 API
+更多类似的判断性接口都会在苹果的 API 文档中体现，利用这些接口，我们就能写出更优雅的环境判断代码。
 
 ### 更多的 API 支持
 

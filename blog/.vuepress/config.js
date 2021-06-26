@@ -1,5 +1,8 @@
 module.exports = {
     title: 'Onee\'s Blog',
+    head: [
+        ['link', { rel: 'icon', href: '/icon.png' }]
+    ],
     description: 'Onee\'s Blog',
     theme: '@vuepress/theme-blog',
     themeConfig: {

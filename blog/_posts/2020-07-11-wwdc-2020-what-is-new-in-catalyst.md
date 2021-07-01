@@ -65,7 +65,7 @@ typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 
 [UITablView.selectionFollowsFocus](https://developer.apple.com/documentation/uikit/uitableview/3573921-selectionfollowsfocus?language=objc) 和 [UICollectionView.selectionFollowsFocus](https://developer.apple.com/documentation/uikit/uicollectionview/3573920-selectionfollowsfocus) 让用户在TableView 和 CollectionView 的 Cell 之间使用键盘的上下键来切换当前选中的 Cell：
 
-![2020-07-12 13-49-36.2020-07-12 13_50_18](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 13-49-36.2020-07-12 13_50_18.gif)
+![move cell](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/move-cell.gif)
 
 使用 [UISceneActivationRequestOptions.collectionJoinBehavior](https://developer.apple.com/documentation/uikit/uisceneactivationrequestoptions/3623235-collectionjoinbehavior) 可以改变用户尝试创建新的 Tab 时的默认行为，目前提供了四种行为：
 
@@ -91,7 +91,7 @@ typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 
 另外，在 Big Sur 中，开发者所弹出的 ModalViewController 以及 PopoverPresentationController 都将会以独立的 Window 形式存在。这意味着，我们通过 `prensentViewController:animated` 所弹出的 ModalViewController 在 macOS 是可以单独被拉伸缩放窗口大小的：
 
-![2020-07-12 15-17-39.2020-07-12 15_18_30](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/2020-07-12 15-17-39.2020-07-12 15_18_30.gif)
+![2020-07-12 15-17-39.2020-07-12 15_18_30](/assets/images/2020-07-11-wwdc-2020-what-is-new-in-catalyst/ModalViewController.gif)
 
 而我们弹出的 PopoverPresentationController 的内容也可以拓展到主 Window 之外：
 

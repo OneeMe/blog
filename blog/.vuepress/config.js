@@ -17,10 +17,10 @@ module.exports = {
                 text: 'Timeline',
                 link: '/',
             },
-            {
-                text: 'Skill',
-                link: '/skill/',
-            },
+            // {
+            //     text: 'Skill',
+            //     link: '/skill/',
+            // },
             {
                 text: 'About',
                 link: '/about/',

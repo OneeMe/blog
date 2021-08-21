@@ -3,6 +3,9 @@ title: 包管理器的前世今生
 date: 2020-05-24 22:12 +0800
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
+level: internal
+tags: 
+  - 计算机|工具|包管理
 ---
 
 本文来自于一次内部分享，主要针对 Cocoapods、Homebrew、Gem 这一类十分相似的包管理器进行了对比和研究，尝试从一个更高维度、更抽象的层面去汇总这些包管理器的内部思路。

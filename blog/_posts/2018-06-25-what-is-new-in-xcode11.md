@@ -5,7 +5,7 @@ typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 
   - 青铜
-  - 计算机-工具-IDE-Xcode
+  - Computer-Tools-IDE-Xcode
 ---
 
 

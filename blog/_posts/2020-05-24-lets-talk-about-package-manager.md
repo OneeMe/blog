@@ -5,7 +5,7 @@ typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 
   - 白银
-  - 计算机-工具-包管理
+  - Computer-Tools-PackageManager
 ---
 
 本文来自于一次内部分享，主要针对 Cocoapods、Homebrew、Gem 这一类十分相似的包管理器进行了对比和研究，尝试从一个更高维度、更抽象的层面去汇总这些包管理器的内部思路。

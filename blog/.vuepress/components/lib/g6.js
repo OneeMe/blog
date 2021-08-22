@@ -58,11 +58,12 @@ const registerCardNode = () => {
       group.addShape("text", {
         attrs: {
           textBaseline: "top",
-          x: -w / 2 + 8,
+          x: -w / 2 + 4,
           y: -h / 2 + 4,
           lineHeight: 16,
           text: cfg.id,
           fill: "#fff",
+          fontSize: 10,
           cursor: isNotLeaf ? "auto" : "pointer",
         },
         name: "title",
@@ -112,6 +113,7 @@ export const createGraph = () => {
     defaultNode: {
       type: "card-node",
     },
+    animate: false,
     defaultEdge: {
       type: "cubic",
       style: {
@@ -133,7 +135,8 @@ export const createGraph = () => {
       return {
         ...node,
         type: "cubic",
-        size: [25],
+        size: [16],
+        label: '🤩'
       };
     }
     return node;

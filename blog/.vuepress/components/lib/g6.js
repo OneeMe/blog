@@ -100,8 +100,22 @@ export const createGraph = (width, height) => {
   registerCardNode();
   const graph = new G6.TreeGraph({
     container: "graph",
+    minZoom: 0.4,
     width: width,
     height: height,
+    modes: {
+      default: [
+        {
+          type: 'drag-canvas',
+          enableOptimize: true,
+        },
+        {
+          type: 'zoom-canvas',
+          enableOptimize: true,
+          optimizeZoom: 0.01,
+        },
+      ],
+    },
     layout: {
       type: "dendrogram",
       direction: "LR",

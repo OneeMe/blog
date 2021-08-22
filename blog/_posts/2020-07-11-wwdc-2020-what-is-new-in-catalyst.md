@@ -5,7 +5,8 @@ typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 level: basic
 tags: 
-  - 计算机|平台|iOS|Cataclyst
+  - 青铜
+  - 计算机-平台-iOS-Cataclyst
 ---
 
 [Mac Catalyst](https://developer.apple.com/mac-catalyst/) 是苹果在 2019 年的 WWDC 大会上宣布的一种新的技术，这种技术的目的是让我们能够非常简单的将已有的 iPad App 快速转为一个 macOS App。

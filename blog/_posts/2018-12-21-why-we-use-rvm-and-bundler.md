@@ -3,9 +3,9 @@ title: 为什么我们要使用 RVM / Bundler
 date: 2018-12-21 16:37 +0800
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
-level: internal
 tags: 
-  - 计算机|工具|包管理
+  - 白银
+  - 计算机-工具-包管理
 ---
 
 作为一名 iOS 工程师，cocoapods 是我们所不会陌生的。然而在我们的日常开发中，编写 cocoapods 的 Ruby 语言我们可能不甚了解，更不要说 Bundler 以及 RVM 了。因此，当我们遇到一些 Ruby 环境相关的问题时，可能完全不知道发生了什么。如果恰好你对这两个工具做了什么感到好奇，那么，在这篇文章中，我会尽量由浅入深的去说明 RVM / Bundler 的原理和作用，帮助大家对 Ruby 的环境管理有一个更加深入的理解。

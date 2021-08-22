@@ -3,9 +3,9 @@ title: 使用 github pages 搭建自己的博客 —— 自定义域名
 date: 2017-12-04 00:37 +0800
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
-level: basic
 tags: 
-  - 计算机|网络
+  - 青铜
+  - 计算机-网络
 ---
 
 按照 GitHub 官方的[指导](https://help.GitHub.com/articles/quick-start-setting-up-a-custom-domain/)，如果我们想把自己购买的域名绑定到 GitHub pages 的页面，我们需要在仓库的设置中添加自己的域名，同时还需要在自己域名的经销商网站增加两条 A 类型的记录。我很好奇这些操作实际都做了什么，因此写下本文来说明这些操作的目的以及其意义。

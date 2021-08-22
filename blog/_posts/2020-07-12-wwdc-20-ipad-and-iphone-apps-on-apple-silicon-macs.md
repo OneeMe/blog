@@ -3,9 +3,9 @@ title: "WWDC20-10114-iPad and iPhone apps on Apple Silicon Macs"
 date: 2020-07-12 20:33 +0800
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
-level: basic
 tags: 
-  - 计算机|平台|iOS|Silicon
+  - 青铜
+  - 计算机-平台-iOS-Silicon
 ---
 
 今年 WWDC 最为重磅的消息可能就是 Apple Silicon Mac——搭载着苹果自研芯片的 Mac。得益于 CPU 架构的统一，在 Mac上原生的运行 iPhone 或者 iPad App 似乎已经不是那么的遥不可及了。相信很多人都会好奇苹果将会用什么样的方式将这些移动设备上的 App 带到我们手中的 Mac 上。[Session 10114 iPad and iPhone apps on Apple Silicon Macs](https://developer.apple.com/videos/play/wwdc2020/10114/) 就是对这些疑问的一个统一回答。

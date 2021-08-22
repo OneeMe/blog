@@ -95,17 +95,18 @@ const registerCardNode = () => {
   });
 }
 
-export const createGraph = () => {
+export const createGraph = (width, height) => {
+  height = height ? height : width;
   registerCardNode();
   const graph = new G6.TreeGraph({
     container: "graph",
-    width: 740,
-    height: 740,
+    width: width,
+    height: height,
     layout: {
       type: "dendrogram",
       direction: "LR",
-      nodeSep: 60, // 节点纵向距离
-      rankSep: 150, // 节点横向距离
+      nodeSep: 60,
+      rankSep: 150,
     },
     nodeStateStyles: {
       hover: {},
@@ -136,7 +137,7 @@ export const createGraph = () => {
         ...node,
         type: "cubic",
         size: [16],
-        label: '🤩'
+        label: '🤩',
       };
     }
     return node;

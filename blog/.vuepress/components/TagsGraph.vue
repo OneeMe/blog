@@ -1,5 +1,5 @@
 <template>
-  <div id="outline">
+  <div id="outline" ref="outline">
     <div id="graph"></div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
     },
   },
   mounted() {
-    const graph = createGraph();
+    const graph = createGraph(this.$refs.outline.offsetWidth);
     graph.on("node:click", (evt) => {
       const url = evt.item.getModel().url;
       if (url) {

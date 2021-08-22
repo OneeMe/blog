@@ -122,9 +122,6 @@ export const createGraph = (width, height) => {
       nodeSep: 60,
       rankSep: 150,
     },
-    nodeStateStyles: {
-      hover: {},
-    },
     defaultNode: {
       type: "card-node",
     },
@@ -133,7 +130,7 @@ export const createGraph = (width, height) => {
       type: "cubic",
       style: {
         endArrow: true,
-        color: "rgb(154,196.251)",
+        stroke: 'black',
       },
     },
   });

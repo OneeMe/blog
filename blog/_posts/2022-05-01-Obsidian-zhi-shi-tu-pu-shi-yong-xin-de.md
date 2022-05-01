@@ -3,7 +3,7 @@ title: Obsidian 知识图谱使用心得
 date: 2022-05-01
 feishu: https://www.feishu.cn/docs/doccnW8LkyCwjCYBWVThAyaoace
 tags:
-  - 白银
+  - 青铜 
   - Instruments-Note
 ---
 

@@ -4,7 +4,6 @@ module.exports = {
         ['link', { rel: 'icon', href: '/icon.png' }]
     ],
     description: 'Onee\'s Blog',
-    theme: '@vuepress/theme-blog',
     themeConfig: {
         feed: {
             rss: true,

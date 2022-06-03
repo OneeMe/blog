@@ -1,7 +1,7 @@
 ---
 title: Obsidian 知识图谱使用心得
 date: 2022-05-01
-feishu: https://www.feishu.cn/docs/doccnW8LkyCwjCYBWVThAyaoace
+feishu: https://x0ibii956s.feishu.cn/docs/doccnvhOKenYnKlu9h5Qpo5SwXg
 tags:
   - 青铜 
   - Instruments-Note
@@ -12,7 +12,7 @@ tags:
 <!--more-->
 
 
-> 这里只是一个静态存档，完整文章请到 [飞书](https://www.feishu.cn/docs/doccnW8LkyCwjCYBWVThAyaoace) 查看
+> 这里只是一个静态存档，完整文章请到 [飞书](https://x0ibii956s.feishu.cn/docs/doccnvhOKenYnKlu9h5Qpo5SwXg) 查看
 
 在最开始使用各种笔记软件的时候，我的注意力都放在了 “笔记软件功能全不全” 这件事情上而忽视了记笔记最重要的原则：管理自己的知识。从去年（2021）年底开始，我开始重新思考到底什么样的笔记才能帮助我管理自己的知识，在参考了 “卡片笔记法” 的一些文章后，我慢慢总结了自己记笔记的一些原则，并从今年（2022）上半年开始，按照这些原则将所有的笔记从 Bear 迁移到了 Obsidian，这些原则总结下来有三点：​
 - 链接：新笔记要尽力和已有的笔记进行链接​

@@ -11,7 +11,7 @@
     "sync": "scripts/sync_obisdian.rb"
   },
   "dependencies": {
-    "@antv/g6": "^4.6.8",
+    "@antv/g6": "^4.6.15",
     "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.9.7"
   }

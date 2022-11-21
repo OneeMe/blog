@@ -1,6 +1,6 @@
 ---
 title: 包管理器的前世今生
-date: 2020-05-24 22:12 +0800
+date: 2020/05/24
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 

@@ -1,6 +1,6 @@
 ---
 title: "WWDC20-10143-What's new in Mac Catalyst"
-date: 2020-07-11 21:47 +0800
+date: 2020/07/11
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 level: basic

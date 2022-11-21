@@ -1,6 +1,6 @@
 ---
 title: Obsidian 知识图谱使用心得
-date: 2022-05-01
+date: 2022/05/01
 feishu: https://x0ibii956s.feishu.cn/docs/doccnvhOKenYnKlu9h5Qpo5SwXg
 tags:
   - 青铜 

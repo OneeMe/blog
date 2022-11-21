@@ -1,6 +1,6 @@
 ---
 title: 为什么我们要使用 RVM / Bundler
-date: 2018-12-21 16:37 +0800
+date: 2018/12/21
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 

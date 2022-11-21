@@ -1,6 +1,6 @@
 ---
 title: 使用 github pages 搭建自己的博客 —— 自定义域名
-date: 2017-12-04 00:37 +0800
+date: 2017/12/04
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 

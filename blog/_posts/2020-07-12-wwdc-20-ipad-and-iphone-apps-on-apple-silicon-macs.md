@@ -1,6 +1,6 @@
 ---
 title: "WWDC20-10114-iPad and iPhone apps on Apple Silicon Macs"
-date: 2020-07-12 20:33 +0800
+date: 2020/07/12
 typora-root-url: ../.vuepress/public
 typora-copy-images-to: ../.vuepress/public/assets/images/${filename}
 tags: 

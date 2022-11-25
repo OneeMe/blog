@@ -132,10 +132,10 @@
     probe.gl "^3.1.1"
     reflect-metadata "^0.1.13"
 
-"@antv/g6-core@0.7.14":
-  version "0.7.14"
-  resolved "https://registry.npmmirror.com/@antv/g6-core/-/g6-core-0.7.14.tgz#a8850994101263726b7b21403f00321e1b1c8650"
-  integrity sha512-4YBxtjN16HzIvCJskXI9u0hL+dO8yVbGU5g2XWNAEjHLcTEkb0hohrwHQuioRUJTkWKC4P4BDZMJgBTBZH4VMA==
+"@antv/g6-core@0.7.15":
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/@antv/g6-core/-/g6-core-0.7.15.tgz#b6dd79810fdb523be9f93490e12a0888e6ff8a01"
+  integrity sha512-u1QGgba9eqBG7YdiTvtt6QPoSaLXh77uXMOAFKOIBcsiorix4Ttxq+X3bPgXaENA21F7ZRO+yCBfBrCqi6QS3g==
   dependencies:
     "@antv/algorithm" "^0.1.8"
     "@antv/dom-util" "^2.0.1"
@@ -148,19 +148,19 @@
     ml-matrix "^6.5.0"
     tslib "^2.1.0"
 
-"@antv/g6-element@0.7.14":
-  version "0.7.14"
-  resolved "https://registry.npmmirror.com/@antv/g6-element/-/g6-element-0.7.14.tgz#d6d22dc7d390a4a324209fc91136c6826b4f8f67"
-  integrity sha512-sdx/9/Oo/0nTJ3mgt1qJUZkh3SIpRvt9RUsAka33K1MBMGob9jf+OduZ2wNhnF0ERDlCo2PzcXpc8i2Gno5buQ==
+"@antv/g6-element@0.7.15":
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/@antv/g6-element/-/g6-element-0.7.15.tgz#e6c71b2045a4b18013b40f2830247e416bd34bab"
+  integrity sha512-x0q+6fKRTSjp+zBRaSx4OTTRV2l27Z/IsWL7sieltdAze3m17J4piHVGuu6ItRBY3Divk/3wTuHZWwnO1sLbbA==
   dependencies:
     "@antv/g-base" "^0.5.1"
-    "@antv/g6-core" "0.7.14"
+    "@antv/g6-core" "0.7.15"
     "@antv/util" "~2.0.5"
 
-"@antv/g6-pc@0.7.14":
-  version "0.7.14"
-  resolved "https://registry.npmmirror.com/@antv/g6-pc/-/g6-pc-0.7.14.tgz#47919352cc03e36c701229aed5ed19a1ae1c6ce2"
-  integrity sha512-M8ijjAxNagmwnpqSjt/ZJmMWxtJV9qMrtUmw673HfTLdCFRuPvL61LtEEaxooKT8Ulv1zSH8wrLYy277vuLF7Q==
+"@antv/g6-pc@0.7.15":
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/@antv/g6-pc/-/g6-pc-0.7.15.tgz#9140ac105cf8d327e13fb1d0687c7e2aff12a453"
+  integrity sha512-/+TzciJXTkcjnnsG8N2pN+thxxiJ4UF6OSPw/zl+ps02uTOcj6kGSCpwyk00jTibrjw2iNQjRrEL+zlN+c+XyA==
   dependencies:
     "@ant-design/colors" "^4.0.5"
     "@antv/algorithm" "^0.1.8"
@@ -170,9 +170,9 @@
     "@antv/g-canvas" "^0.5.2"
     "@antv/g-math" "^0.1.1"
     "@antv/g-svg" "^0.5.1"
-    "@antv/g6-core" "0.7.14"
-    "@antv/g6-element" "0.7.14"
-    "@antv/g6-plugin" "0.7.14"
+    "@antv/g6-core" "0.7.15"
+    "@antv/g6-element" "0.7.15"
+    "@antv/g6-plugin" "0.7.15"
     "@antv/hierarchy" "^0.6.7"
     "@antv/layout" "^0.3.0"
     "@antv/matrix-util" "^3.1.0-beta.3"
@@ -184,29 +184,29 @@
     insert-css "^2.0.0"
     ml-matrix "^6.5.0"
 
-"@antv/g6-plugin@0.7.14":
-  version "0.7.14"
-  resolved "https://registry.npmmirror.com/@antv/g6-plugin/-/g6-plugin-0.7.14.tgz#cced2bff374830cd62311596a1ecc42576b0b2b1"
-  integrity sha512-nUhBG5Mx4lOB+YFD0eFtCY8Bxp7DU3D4I6gg0EnaVWwuWvIpQdGQwin4l7yTrZYMlttxp4yl+RREdUViSGL5CQ==
+"@antv/g6-plugin@0.7.15":
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/@antv/g6-plugin/-/g6-plugin-0.7.15.tgz#789c2e3d85aad3ffcbe21e1e60a91e252e75a460"
+  integrity sha512-1Q/z4mzUrtosu0uP3Zvl9Nw7tZvnXqUgzMJfC+CD8HeS6+Y060TQ0GlT20iCaxEEqvnPrFli5J4hnRjR/GbP3Q==
   dependencies:
     "@antv/dom-util" "^2.0.2"
     "@antv/g-base" "^0.5.1"
     "@antv/g-canvas" "^0.5.2"
     "@antv/g-svg" "^0.5.2"
-    "@antv/g6-core" "0.7.14"
-    "@antv/g6-element" "0.7.14"
+    "@antv/g6-core" "0.7.15"
+    "@antv/g6-element" "0.7.15"
     "@antv/matrix-util" "^3.1.0-beta.3"
     "@antv/path-util" "^2.0.3"
     "@antv/scale" "^0.3.4"
     "@antv/util" "^2.0.9"
     insert-css "^2.0.0"
 
-"@antv/g6@^4.0.4":
-  version "4.7.14"
-  resolved "https://registry.npmmirror.com/@antv/g6/-/g6-4.7.14.tgz#a293bae13cafc159cf357efee333a30a0a0da8fd"
-  integrity sha512-pjJTHtGtO0+MsEokwTETT/uurJWcQrL86Q/wG1Hcf6UHHSikz+iUMJYoK7eUW02LlovdVZa7Bh9SVpWeiQNuyg==
+"@antv/g6@^4.7.15":
+  version "4.7.15"
+  resolved "https://registry.yarnpkg.com/@antv/g6/-/g6-4.7.15.tgz#6528317a2fa3ba82b6267624b4c5ed430961618f"
+  integrity sha512-9VsFxuF8t9NgYoZEtKmXR0JnisX7lZ7nAeWRnlGXGadhO0XGN9AJ3//juJmg6gU/s6LY6VT9JWHJDAMxcmhSEw==
   dependencies:
-    "@antv/g6-pc" "0.7.14"
+    "@antv/g6-pc" "0.7.15"
 
 "@antv/graphlib@^1.0.0":
   version "1.2.0"

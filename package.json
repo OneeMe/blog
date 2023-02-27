@@ -10,6 +10,6 @@
   "dependencies": {
     "@antv/g6": "^4.7.16",
     "@vuepress/theme-blog": "^2.3.3",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.9"
   }
 }
